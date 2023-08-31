@@ -1,4 +1,7 @@
 # ASP.NET Core
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
 # compile y ejecute pruebas de proyectos asp.net Core con destino .net core.
 # agregue pasos que ejecuten pruebas, creen un paquete nuget, implementaen y mas
 #https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
