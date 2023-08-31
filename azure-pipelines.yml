@@ -1,3 +1,21 @@
+# ASP.NET Core
+# compile y ejecute pruebas de proyectos asp.net Core con destino .net core.
+# agregue pasos que ejecuten pruebas, creen un paquete nuget, implementaen y mas
+#https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- main
+
+grupo:
+    vmImage: ubuntu-latest
+
+variables:
+    buildConfiguration: 'Release'
+
+
+
 pool: MyAgentPool
 steps:
-- bash: echo hello world
+ -  script: dotnet build --configuration $(buildConfiguration)
+    displayName: 'dotnet build $(buildConfiguration)'
+
